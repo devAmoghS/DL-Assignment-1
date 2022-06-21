@@ -11,7 +11,7 @@ class ModelMaker():
     """
     This function will prepare a Sequential model
     according to input configuration
-    
+
     hidden_layers -> Int : number of hidden layers in network
     hidden_layers -> Int : number of nodes in each hidden layer
     return -> None
@@ -54,7 +54,7 @@ class ModelMaker():
     Additionaly it will split the training and validation data
     
     dataset -> pd.DataFrame : dataset
-    return -> (X_train, X_val, y_train, y_val)
+    return -> train and val tuple : (X_train, X_val, y_train, y_val)
     """
     print("Preparing dataset...")
     self.X = dataset.iloc[:,0:2]
@@ -117,6 +117,7 @@ class ModelMaker():
     predictions = (self.model.predict(val_X) > 0.5).astype(int)
 
     # summarize the first 5 cases
+    print("Feature Set => Predicted Value (Actual Value)")
     for i in range(5):
       print('%s => %d (expected %d)' % (val_X.iloc[i].values, predictions[i], val_y.iloc[i]))
 
