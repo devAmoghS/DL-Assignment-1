@@ -11,6 +11,7 @@ class ModelMaker():
     """
     This function will prepare a Sequential model
     according to input configuration
+    
     hidden_layers -> Int : number of hidden layers in network
     hidden_layers -> Int : number of nodes in each hidden layer
     return -> None
@@ -51,6 +52,7 @@ class ModelMaker():
     """
     This function will extract features and labels.
     Additionaly it will split the training and validation data
+    
     dataset -> pd.DataFrame : dataset
     return -> (X_train, X_val, y_train, y_val)
     """
