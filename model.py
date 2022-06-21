@@ -13,7 +13,7 @@ class ModelMaker():
     according to input configuration
 
     hidden_layers -> Int : number of hidden layers in network
-    hidden_layers -> Int : number of nodes in each hidden layer
+    hidden_nodes -> Int : number of nodes in each hidden layer
     return -> None
     """
     self.hidden_layers = hidden_layers
