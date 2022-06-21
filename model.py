@@ -26,15 +26,21 @@ class ModelMaker():
     print(f"Number of nodes in each hidden layer: {self.hidden_nodes}")
 
     model = Sequential()
+    
     # input layer
-    model.add(Dense(4, input_shape=(2,), activation='sigmoid'))
+    model.add(Dense(12, input_shape=(2,), activation='relu'))
+    
     # hidden layer(s)
     for l in range(0, self.hidden_layers):
-      model.add(Dense(self.hidden_nodes, activation='sigmoid'))
+      model.add(Dense(self.hidden_nodes, activation='relu'))
+    
     # output layer -- binary classification
     model.add(Dense(1, activation='sigmoid'))
+    
     # compile the keras model
-    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+    model.compile(loss='binary_crossentropy', 
+                  optimizer='rmsprop',
+                  metrics=['accuracy'])
 
     # set the instance to trained model
     self.model = model
@@ -117,10 +123,13 @@ URL = "https://raw.githubusercontent.com/devAmoghS/DL-Assignment-1/main/data2_0.
 df = pd.read_csv(URL, names=["X1", "X2", "class"], header=None)    
 
 # intialising model
-m = ModelMaker(2,16)
+modm = ModelMaker(2, 12)
+
 # preparing dataset
-X_train, X_val, y_train, y_val = m.prepare_data(df)
+X_train, X_val, y_train, y_val = modm.prepare_data(df)
+
 # training model
-m.train_model(X_train, y_train, epochs=100, batch_size=20)
+modm.train_model(X_train, y_train, epochs=10000, batch_size=10)
+
 # running predictions
-m.predict(X_val, y_val)
+modm.predict(X_val, y_val)
