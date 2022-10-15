@@ -12,4 +12,4 @@
 * Processing images and applying data augmentation to make new training data
 * Designing an architecture to perform decent classification
 
-[![Open In Colab](https://colab.research.google.com/github/devAmoghS/DL-Assignment-1/blob/main/DLAssignment1_Q2_Group255.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devAmoghS/DL-Assignment-1/blob/main/DLAssignment1_Q2_Group255.ipynb)
