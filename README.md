@@ -6,3 +6,10 @@
 * Designing an architecture to perform decent classification
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devamoghs/DL-Assignment-1/blob/main/DLAssignment1_Q1_Group255-Final.ipynb)
+
+## Making a minimalistic model to classify Spiral data (XOR dataset) using neural models
+* How to process images as a pandas dataframe ?
+* Processing images and applying data augmentation to make new training data
+* Designing an architecture to perform decent classification
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devamoghs/DL-Assignment-1/blob/main/DLAssignment1_Q2_Group255-Final.ipynb)
